@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  width: 100%;
+  background: #3e83d3;
+}
+.nav-container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  text-transform: uppercase;
+  color: white;
+  padding: 15px;
+}
+.nav-item a {
+  text-decoration: none;
+  margin-right: 10px;
+  color: #a8c7eb;
+}
+.nav-item a:first-child {
+  color: white;
+}
+.judul h1 {
+  font-size: 20px;
+}
+
+main {
+  width: 100%;
+  background: #f8f8ff;
+  height: 88vh;
+}
+.main-container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  align-items: center;
+}
+.main-container img {
+  margin-top: 30px;
+  width: 300px;
+  border-radius: 50%;
+  aspect-ratio: 4/4;
+  border: 5px aqua solid;
+  margin-bottom: 10px;
+}
+.main-container h2 {
+  font-size: 40px;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+legend {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.social-media {
+  width: 200px;
+  display: flex;
+  padding: 20px;
+  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+  backdrop-filter: blur(14px);
+  background-color: rgba(61, 12, 255, 0.687);
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  flex-direction: row;
+}
+.social-media a {
+  text-decoration: none;
+  margin-right: 20px;
+}
+.social-media :where(i, a) {
+  color: white;
+  text-align: center;
+  font-size: 40px;
+}
+
+.social-media i:hover {
+  color: aqua;
+}
+
+.social-media :where(i, a)::after {
+  content: " ";
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.social-media a:hover::after {
+  opacity: 1;
+  margin-left: 10px; /* Untuk menggeser ke kanan */
+  transform: translateX(0);
+  color: aqua;
+}
+.social-media a:first-child:hover::after {
+  content: "Instagram";
+}
+.social-media a:last-child:hover::after {
+  content: "LinkedIn";
+}
